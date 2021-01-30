@@ -69,15 +69,19 @@ class Game extends React.Component {
 
 		this.shotSound = new Audio("./media/audio/metalbat.wav");
 		this.scoreSound = new Audio("./media/audio/yell4yeeha.wav");
+	
+		// this.shoot = this.shoot.bind(this)
 	}
 
+	
+
 	shoot = (team) => {
-		const teamStatsKey = `${team}TeamStats`;
-		let score = this.state[teamStatsKey].score;
-		this.shotSound.play();
+		const teamStatsKey = `${team}TeamStats`
+		let score = this.state[teamStatsKey].score
+		this.shotSound.play()
 
 		if (Math.random() > 0.5) {
-			score += 1;
+			score += 1
 
 			setTimeout(() => {
 				this.scoreSound.play()
