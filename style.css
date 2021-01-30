@@ -1,48 +1,67 @@
 /** @format */
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
 html {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 body {
-    background: rgba(0, 0, 0, .5);
-    background: url(media/images/nightCity.png) no-repeat center/cover fixed ;
-    backdrop-filter: opacity(50%);
-    font-family: 'Architects Daughter', cursive;
-    font-weight: bold; 
-    color: deeppink;
+	padding: 0;
+	margin: 0;
+	background: rgba(0, 0, 0, 0.5);
+	background: url(media/images/nightCity.png) no-repeat center/cover fixed;
+	backdrop-filter: opacity(50%);
+	font-family: "Architects Daughter", cursive;
+	font-weight: bold;
+	color: deeppink;
 }
-.teamGames {
-    display: grid;
-    grid-template-columns: 2fr 33% 33% 1fr;
-    justify-items: center;
-
-    
+.ScoreBoard {
+	display: flex;
+	justify-content: flex-start;
+	text-align: center;
 }
-
-.teamOne {
-    grid-column: 2;
-    background-color: rgba(0, 0, 0, .5);
-    font-size: 1.5rem;
+.ScoreBoard h3 {
+	margin: 0;
 }
-.teamTwo {
-    grid-column: 3;
-    background-color: rgba(0, 0, 0, .5);
-    font-size: 1.5rem;
-
-    
+.ScoreBoard .teamStats {
+	flex: 1;
 }
-h1 {
-    text-align: center;
+.identity img {
+	max-height: 15rem;
+	filter: drop-shadow(0 0 0.75rem deeppink);
 }
 
-/* .teamOne {
-    align-self: center;;
-} */
+.Game h1 {
+	text-align: center;
+	font-size: 3rem;
+	color: black;
+	text-shadow: 3px 3px 10px magenta;
+}
 
-img {
-    width: 30%;
-    border-radius: 10px;
+.Team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 30rem;
+
+	color: skyblue;
+	text-shadow: 3px 3px 10px magenta;
+}
+
+.Team .identity {
+	height: 15rem;
+	display: flex;
+
+	flex-direction: column;
+}
+.ScoreBoard {
+	display: flex;
+	justify-content: space-between;
+	background-color: #e01cb577;
+	color: black;
+	font-size: 2rem;
+	font-weight: bolder;
+	max-height: 10rem;
 }
 
 .buttons {
@@ -61,4 +80,21 @@ img {
 	border-radius: 50px;
 	border-color: #e01cb6;
 	transition: all 0.3s ease 0s;
+}
+.stats {
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+}
+.stats h1 {
+	font-size: 3rem;
+}
+.versus {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	color: black;
+	text-shadow: 3px 3px 10px magenta;
 }
